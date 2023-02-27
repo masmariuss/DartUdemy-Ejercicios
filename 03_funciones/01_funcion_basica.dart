@@ -30,6 +30,7 @@ void main() {
 
 // Cuando no tengamos un return explícito en nuestra función, obtendremos un retorno de null.
 // Si la función no devuelve nada (no tiene return) tenemos que poner la palabra reservada void. De esta manera prevenimos errores de tipo null.
+// Es decir, cuando no necesitamos regresar un valor, decimos que es del tipo void.
 
 String saludar() {
 

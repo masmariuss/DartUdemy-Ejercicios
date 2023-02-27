@@ -26,12 +26,12 @@ main() {
    // Operadores Relacionales
    // Todos retornan un valor booleano
   /*
-     >  Mayor que
-     <  Menor que
-     >= Mayor o igual que
-     <= Menor o igual que
-     == Revisa si dos objetos son iguales
-     != Revisa si dos objetos son diferentes
+    >  Mayor que
+    <  Menor que
+    >= Mayor o igual que
+    <= Menor o igual que
+    == Revisa si dos objetos son iguales
+    != Revisa si dos objetos son diferentes
   */
 
   String persona1 = 'Fernando';
