@@ -19,6 +19,10 @@
 } */
 
 
+// Los enum son un tipo especial de clase utilizada para representar un número fijo de valores constantes.
+// Es definida fuera del main().
+// El nombre de la enumeración siempre va capitalizada la primera letra de cada palabra.
+
 main() {
 
   Audio volumen = Audio.alto;
@@ -33,17 +37,16 @@ main() {
 
 }
 
-
-// Una enumeración es como una función (aunque se parece más a una clase).
-// Es definida fuera del main().
-// El nombre de la enumeración siempre va capitalizada la primera letra de cada palabra.
-
 enum Audio {
   bajo,
   medio,
   alto
 }
 
-// La ventaja de las enumeraciones es que facilitan muchoi la lectura de nuestro código.
+
+
+// Podemos decir que con los enum acotamos un cierto número de posibilidades, como por ejemplo un tipo de rol de usuario o un tipo de configuración. 
+
+// La ventaja de las enumeraciones es que facilitan mucho la lectura de nuestro código.
 // Podemos visualizar qué valores son los permitidos en el volumen, sin necesidad de ver la documentación de nuestro programa.
 

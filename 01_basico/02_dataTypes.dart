@@ -1,3 +1,7 @@
+
+
+// En Dart se utiliza lowerCamelCase para la definición de variables, y UpperCamelCase para las clases.
+
 main() {
 
   // ===== Número
@@ -27,7 +31,8 @@ main() {
   O'Connor''';
 
   // print (nombre == nombre2);
-  // print (multilinea);
+
+  print (nombreCompleto.runtimeType);
 
 
   // ===== Booleans
@@ -38,28 +43,62 @@ main() {
 
 
 
-  // ===== Lists
-  // Una lista no es más que una colección de datos que tienen algo en común entre sí.
+  // ===== Listas (Lists)
+  // Las listas son un conjunto de datos, una colección de elementos. 
+  // Dependiendo de cómo se definan, no tienen por qué tener el mismo tipo de dato.
 
-  List<String> villanos = ['Lex', 'Red Skull', 'Doom']; // Son en base 0
+  List<String> villanos = ['Lex', 'Red Skull', 'Doom']; 
   //                          0         1         2
 
+// Las List por defecto es de tipo genérico, es decir, aceptan todos los tipos de datos. 
+// Si no especificamos qué tipo de dato es List se entiende como dynamic.
+// Dart va a inferir los tipos en tiempo de ejecución del programa.
+// List numeros = [1, 'Paco', true]; -> implícitamente esto es List<dynamic> numeros.
+// Es recomendable definir el tipo de dato que incluirá List.
+
+  // Las List son en base 0
+  print(villanos[0]);
+  // Lex
   villanos[0] = 'Superman';
+  print(villanos);
+  // Se ha cambiado el valor de la posición [0] por el de 'Superman'.
+  // [Superman, Red Skull, Doom]
+
+  // Si quiero agregar otro elemento a la lista, esta viene con muchos métodos.
+  // Los métodos no son mas que funciones que están incluidas en ese tipo de dato.
+
+  // El método más común de List es .add   (dynamic value) -> void
+  // .add es el nombre del método
+  // dynamic es el tipo de dato
+  // value es el valor que vamos a mandar como argumento a la función.
+  // -> esta flecha indica que es una función que retorna void.
+  // que retorna void significa que no retorna nada, que retorna vacío, nada es su valor de retorno. (diferente a null)
 
   villanos.add('Duende Verde');
   villanos.add('Duende Verde');
   villanos.add('Duende Verde');
+  // print (villanos);
+  // [Superman, Red Skull, Doom, Duende Verde, Duende Verde, Duende Verde]
+  // List acepta valores repetidos, por eso podemos añadir 3 veces a 'Duende Verde'.
 
-  //print (villanos);
+
+// Podemos añadir varios elementos de la siguiente forma:
+
+  villanos..add('Thanos')
+          ..add('Gorr');
+
 
   var villanosSet = villanos.toSet();
   //print(villanosSet.toList());
+  // [Superman, Red Skull, Doom, Duende Verde, Thanos, Gorr]
+
+  // ¿Cómo podemos eliminar todos los resultados duplicados de una List?
+  // Set no admite valores repetidos, así que al convertir List a Set, estos valores se eliminan.
 
 
 
-
-  // ===== Sets
-  // Las Lists y los Sets son muy parecidos. Su principal diferencia reside en que los Sets no admiten duplicados.
+  // ===== Conjuntos (Sets)
+  // Las Lists y los Sets son muy parecidos. Su principal diferencia reside en que los Sets no permite valores duplicados.
 
   Set<String> villanos2 = {'Lex', 'Red Skull', 'Doom'};
 
@@ -70,19 +109,20 @@ main() {
 
   //print(villanos2);
 
-// ¿Cómo podemos eliminar todos los resultados duplicados de una List?
+
 // Transformando la List en un Set y luego del Set a la List.
 
 
 
-// ===== Maps
-// La diferencia entre un Set y un Map (los dos comienzan con curly brackets) es que Map tiene pares (llave y valor).
+// ===== Mapas (Maps)
+
+// Un mapa en dart es un tipo de colección que tiene pares de valores, es decir, tiene su llave (key) y su valor (value).
 
 
 Map<String, dynamic> ironman = {
   'nombre': 'Tony Stark',
-  'poder': 'Inteligencia y el dinero',
-  'nivel': 9000,
+  'poder' : 'Inteligencia y el dinero',
+  'nivel' : 9000,
 };
 
 // print(ironman['nivel']);
@@ -109,6 +149,7 @@ Map<int, int> tabla = {
     9:10
   };
 
-  print(tabla[10]);
+  // print(tabla[10]);
+  // print(tabla[9]);
 
 }
